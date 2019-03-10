@@ -62,7 +62,8 @@ RUN chmod +x /usr/local/bin/start-httpd.sh &&\
     echo "	AllowOverride All"            >> /etc/apache2/httpd.conf &&\
     echo "</Directory>"                       >> /etc/apache2/httpd.conf &&\
     echo "ErrorLog \"/dev/stderr\""           >> /etc/apache2/httpd.conf &&\
-    echo "CustomLog \"/dev/stdout\" combined" >> /etc/apache2/httpd.conf
+    echo "CustomLog \"/dev/stdout\" combined" >> /etc/apache2/httpd.conf &&\
+    mkdir /extras
 
 EXPOSE 80
 

@@ -70,6 +70,9 @@ if [ ! -z "$PHP_XDEBUG_ENABLED" ]
 		echo 'xdebug.remote_autostart=true' >> /etc/php7/php.ini;
 fi
 
+echo "Running extra launch scripts"
+run-parts /extras/
+
 # Start (ensure apache2 PID not left behind first) to stop auto start crashes if didn't shut down properly
 
 echo "Clearing any old processes..."
