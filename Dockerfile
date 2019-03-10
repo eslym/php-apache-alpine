@@ -50,7 +50,7 @@ RUN chmod +x /usr/local/bin/start-httpd.sh &&\
     rm composer-setup.php &&\
     mkdir -p /var/www/html &&\
     echo "<?php phpinfo();" > /var/www/html/index.php &&\
-    chown -R apache.apache /var/www/html &&\
+    chown -R apache:apache /var/www/html &&\
     sed -i "s/#LoadModule\ rewrite_module/LoadModule\ rewrite_module/" /etc/apache2/httpd.conf &&\
     sed -i "s/#LoadModule\ session_module/LoadModule\ session_module/" /etc/apache2/httpd.conf &&\
     sed -i "s/#LoadModule\ session_cookie_module/LoadModule\ session_cookie_module/" /etc/apache2/httpd.conf &&\
